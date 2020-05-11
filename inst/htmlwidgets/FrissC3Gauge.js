@@ -33,7 +33,7 @@ HTMLWidgets.widget({
               },
                 min: x.min,
                 max: x.max,
-                units: x.text,
+                units: 'percentage',//x.text,
                 width: x.gaugeWidth
             },
 
