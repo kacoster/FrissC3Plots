@@ -20,7 +20,7 @@ HTMLWidgets.widget({
 
             data: {
               columns: [
-                ['usage proportion', x.value]
+                ['data', x.value]
               ],
               type: 'gauge'
             },
@@ -33,7 +33,7 @@ HTMLWidgets.widget({
               },
                 min: x.min,
                 max: x.max,
-                units: 'percentage',//x.text,
+                units: x.text,
                 width: x.gaugeWidth
             },
 
