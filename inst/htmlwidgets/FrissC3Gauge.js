@@ -20,7 +20,7 @@ HTMLWidgets.widget({
 
             data: {
               columns: [
-                ['data', x.value]
+                ['usage proportion', x.value]
               ],
               type: 'gauge'
             },
@@ -33,7 +33,7 @@ HTMLWidgets.widget({
               },
                 min: x.min,
                 max: x.max,
-                units: x.text,
+                units: 'percentage',//x.text,
                 width: x.gaugeWidth
             },
 
@@ -53,7 +53,12 @@ HTMLWidgets.widget({
         instance.chart = chart;
 
       }else{
-        instance.chart.load({columns: [['data', x.value]]});
+        instance.chart.load({
+          columns: [
+            ['usage proportion', x.value]
+            ]
+          
+        });
 
         instance.chart.data.colors({
           data: x.color,
